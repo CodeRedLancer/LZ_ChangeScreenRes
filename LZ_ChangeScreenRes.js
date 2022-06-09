@@ -108,8 +108,15 @@ LZ.ChangeScreenRes.version = 1.00;
  * 
  * @help
  * =============================================================================
+ * Github
+ * =============================================================================
+ * 
+ * https://github.com/CodeRedLancer/LZ_ChangeScreenRes.git
+ * 
+ * =============================================================================
  * Introduction
  * =============================================================================
+ * 
  * This gives the options and convencience of changing screen resolutions ingame,
  * while not having to worry about hard coding the resolution. Also a nice feature
  * if you want to test the screen resolution compatibilies in your game without
