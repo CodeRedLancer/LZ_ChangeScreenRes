@@ -25,13 +25,13 @@ LZ.ChangeScreenRes.version = 1.00;
  * @param Width
  * @parent Display Config default
  * @type number
- * @desc Default is 1104 (native resolution).
- * @default 1104
+ * @desc This must be same as Screen width in System 2 settings.
+ * @default 816
  * 
  * @param Height
  * @parent Display Config default
  * @type number
- * @desc Default is 624 (native resolution).
+ * @desc This must be same as Screen height in System 2 settings.
  * @default 624
  * 
  * @param Display Config A
@@ -140,7 +140,11 @@ LZ.ChangeScreenRes.version = 1.00;
  * Width - Screen width in pixels
  * Height - Screen height in pixels
  * 
- * Note: Default Config is always seen in the options.
+ * Note: 
+ *  - Default Config is always seen in the ingame options.
+ *  - Default screen size in System 2 settings MUST be same as in Display Config 
+ *    default in the plugin setting. Otherwise ingame default screen size won't 
+ *    match the screen size shown on the option button.
  * 
 */
 
@@ -191,7 +195,7 @@ size3 = {
 };
 
 LZ.Param.Screen.sizes.push(
-    defaultSize,
+    defaultSize, //default must be first in list
     size1,
     size2,
     size3
