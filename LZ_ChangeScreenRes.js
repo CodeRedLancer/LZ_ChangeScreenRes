@@ -224,10 +224,30 @@ LZ.ConfigManager.defineScreenProperty = function(propertyName) {
                 Graphics.resize(value.width, value.height);
                 ConfigManager.adjustBoxSize();
                 ConfigManager.adjustWindow();
+                LZ.ChangeScreenRes.restartSceneOptions();
             }
         },
         configurable: true
     });
+};
+
+LZ.ChangeScreenRes.restartSceneOptions = function() {
+    if (SceneManager._scene !== null && 
+        SceneManager._scene.constructor.name === "Scene_Options") {
+            
+        if (SceneManager._previousClass.name === "Scene_Title") {
+            SceneManager.push(Scene_Title);
+        } else {
+            SceneManager.push(Scene_Menu);
+        }
+
+        do {
+            if (SceneManager._scene.isStarted()) {
+                SceneManager.pop();
+                break;
+            }
+        } while (true);
+    }
 };
 
 //Defines all screen config properties to ConfigManager
@@ -391,8 +411,6 @@ Window_Options.prototype.changeResolution = function(symbol) {
     const value = this.getConfigValue(symbol);
     if (ConfigManager[symbol].selected) {
         this.setConfigValue(symbol, value);
-        ConfigManager.adjustBoxSize();
-        ConfigManager.adjustWindow();
     }
     this.redrawItem(this.findSymbol(symbol));
     this.playCursorSound();
