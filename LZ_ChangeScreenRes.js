@@ -1,5 +1,5 @@
 //=============================================================================
-// LZ Plugin - Change Screen Resolution Ingame
+// LZ Plugin - Change Screen Resolution Ingame (MZ)
 // LZ_ChangeScreenRes.js
 // by Lanzy
 // Date: June 6, 2022
@@ -14,7 +14,7 @@ LZ.ChangeScreenRes.version = 1.00;
 
 /*:
  * 
- * @plugindesc v1.00 This plugin enables to change the screen resolution during the game.
+ * @plugindesc v1.00 This plugin for MZ enables to change the screen resolution during the game.
  * @author Lanzy
  * 
  * @param ---Screen---
