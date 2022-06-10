@@ -12,6 +12,8 @@ var LZ = LZ || {};
 LZ.ChangeScreenRes = LZ.ChangeScreenRes || {};
 LZ.ChangeScreenRes.version = 1.00;
 
+console.log(`LZ_ChangeScreenRes.js v${LZ.ChangeScreenRes.version} LOADED`);
+
 /*:
  * 
  * @plugindesc v1.00 This plugin for MZ enables to change the screen resolution during the game.
